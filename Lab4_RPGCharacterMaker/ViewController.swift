@@ -27,6 +27,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameField: UITextField!
     
     @IBAction func updateStats(_ sender: UIStepper) {
+        
+        var newHP:Int
+        var newMP:Int
+        var newDodge:Int
+        var strength:Int
+        var intel:Int
+        var dex:Int
+        var percep:Int
+        var luck:Int
+        
+        strengthLabel.text = String(strengthStepper.value)
+        intelLabel.text = String(intelStepper.value)
+        dexLabel.text = String(dexStepper.value)
+        percpLabel.text = String(percpStepper.value)
+        luckLabel.text = String(luckStepper.value)
+        strength = Int(strengthStepper.value)
+        intel = Int(intelStepper.value)
+        dex = Int(dexStepper.value)
+        percep = Int(percpStepper.value)
+        luck = Int(luckStepper.value)
+        
+        newHP = 10 + 100*strength + (dex*2)
+        
+        newMP = intel * 30 + (strength*5)
+        
+        newDodge = 5*dex + (percep * 5) + (luck*3)
+        
+        hpLabel.text = String(newHP)
+        mpLabel.text = String(newMP)
+        dodgeLabel.text = String(format: "%1d%", newDodge)
+        
+        
+        
+        
     }
     func updateName(){
         

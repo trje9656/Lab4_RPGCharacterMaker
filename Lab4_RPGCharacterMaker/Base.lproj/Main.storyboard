@@ -69,7 +69,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odv-W7-SJy">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="110" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odv-W7-SJy">
                                                         <rect key="frame" x="119" y="0.0" width="78" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="jym-Q4-WkD"/>
@@ -119,7 +119,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-Fr-EBF">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-Fr-EBF">
                                                         <rect key="frame" x="148" y="0.0" width="78" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="VCr-iw-GEF"/>
@@ -171,7 +171,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fcD-rf-9CH">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fcD-rf-9CH">
                                                 <rect key="frame" x="213" y="0.0" width="94" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="94" id="958-Ea-6BI"/>
@@ -206,12 +206,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wg4-qK-7iS">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wg4-qK-7iS">
                                                 <rect key="frame" x="213" y="0.0" width="94" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="94" id="Ac6-dz-jg1"/>
                                                     <constraint firstAttribute="height" constant="32" id="m9p-ko-4hA"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="updateStats:" destination="BYZ-38-t0r" eventType="valueChanged" id="NJf-ww-vYR"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -238,12 +241,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-eD-ECS">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-eD-ECS">
                                                 <rect key="frame" x="213" y="0.0" width="94" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="94" id="GwP-ga-ldB"/>
                                                     <constraint firstAttribute="height" constant="32" id="Hge-Hv-8vJ"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="updateStats:" destination="BYZ-38-t0r" eventType="valueChanged" id="8UM-AF-gyf"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -270,12 +276,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-kK-NJR">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-kK-NJR">
                                                 <rect key="frame" x="213" y="0.0" width="94" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="94" id="Nye-VD-wUA"/>
                                                     <constraint firstAttribute="height" constant="32" id="vWa-l7-CqA"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="updateStats:" destination="BYZ-38-t0r" eventType="valueChanged" id="63F-yu-DfT"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -302,12 +311,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-99-mYT">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-99-mYT">
                                                 <rect key="frame" x="213" y="0.0" width="94" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="QmO-Hh-9B8"/>
                                                     <constraint firstAttribute="width" constant="94" id="o4h-uD-0zm"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="updateStats:" destination="BYZ-38-t0r" eventType="valueChanged" id="G0a-E3-12Z"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
