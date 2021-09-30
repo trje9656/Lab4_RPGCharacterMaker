@@ -25,13 +25,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var nameField: UITextField!
-    
+    var strength:Int = 1
+    var newHP:Int = 112
     @IBAction func updateStats(_ sender: UIStepper) {
         
-        var newHP:Int
+        
         var newMP:Int
         var newDodge:Int
-        var strength:Int
+        
         var intel:Int
         var dex:Int
         var percep:Int
@@ -56,10 +57,41 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         hpLabel.text = String(newHP)
         mpLabel.text = String(newMP)
-        dodgeLabel.text = String(format: "%1d%", newDodge)
+        dodgeLabel.text = String(format: "%01d%%", newDodge)
         
         
         
+        
+    }
+    @IBAction func showAlert(_ sender: UIButton) {
+        var hp:Int?
+        
+        hp = Int(hpLabel.text ?? " ") ?? 112
+        
+        if hp! < 1 {
+            //create a UIAlertController object
+                     let alert=UIAlertController(title: "Not Legal", message: "Hitpoints must be greater than 0", preferredStyle: UIAlertController.Style.alert)
+                     //create a UIAlertAction object for the button
+                     let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertAction.Style.cancel, handler: nil)
+                     alert.addAction(cancelAction) //adds the alert action to the alert object
+                     let okAction=UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {action in
+                        
+                     })
+            
+                     alert.addAction(okAction)
+                     present(alert, animated: true, completion: nil)
+        }
+        else{
+            //create a UIAlertController object
+                     let alert=UIAlertController(title: " Legal", message: "No Stats Errors", preferredStyle: UIAlertController.Style.alert)
+                     //create a UIAlertAction object for the button
+                     let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertAction.Style.cancel, handler: nil)
+                     alert.addAction(cancelAction) //adds the alert action to the alert object
+                     let okAction=UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {action in
+                     })
+                     alert.addAction(okAction)
+                     present(alert, animated: true, completion: nil)
+        }
         
     }
     func updateName(){
